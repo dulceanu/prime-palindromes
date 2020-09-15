@@ -49,10 +49,15 @@ public class PrimePalindromesTest {
 	@Test
 	public void testGeneratingMatchesFiltering() {
 		PrimePalindromes mpp = new PrimePalindromes();
+		int a = 11;
+		int b = 101;
+		assertTrue(filteringSolution(a, b).containsAll(mpp.primePalindromes(a, b)));
+		assertTrue(mpp.primePalindromes(a, b).containsAll(filteringSolution(a, b)));
+		
 		Random rand = new Random(42);
 		for (int i = 0; i < 100; i++) {
-			int a = rand.nextInt(10000);
-			int b = a + rand.nextInt(500_000);
+			a = rand.nextInt(10000);
+			b = a + rand.nextInt(500_000);
 
 			List<Integer> filteringResults = filteringSolution(a, b);
 			List<Integer> generatingResults = mpp.primePalindromes(a, b);
