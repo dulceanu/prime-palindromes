@@ -42,6 +42,7 @@ public class PrimePalindromesTest {
 		for (Integer pal : palindromes) {
 			assertTrue(mpp.isPalindrome(pal));
 			assertEquals(0, mpp.countDigits(pal) % 2);
+			assertEquals(4, mpp.countDigits(pal));
 		}
 	}
 
