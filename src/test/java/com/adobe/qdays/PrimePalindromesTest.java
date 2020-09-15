@@ -1,5 +1,6 @@
 package com.adobe.qdays;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
@@ -31,6 +32,17 @@ public class PrimePalindromesTest {
 		assertTrue(pp.isPrime(3));
 		assertTrue(pp.isPrime(13));
 		assertFalse(pp.isPrime(49));
+	}
+	
+	@Test
+	public void testGeneratePalindromes() {
+		PrimePalindromes mpp = new PrimePalindromes();
+
+		List<Integer> palindromes = mpp.generatePalindromes(1000, 9999);
+		for (Integer pal : palindromes) {
+			assertTrue(mpp.isPalindrome(pal));
+			assertEquals(0, mpp.countDigits(pal) % 2);
+		}
 	}
 
 	@Test
