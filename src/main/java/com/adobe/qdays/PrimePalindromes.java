@@ -28,9 +28,7 @@ public class PrimePalindromes {
 	private void generatePalindrome(int digits, int n, List<Integer> palindromes) {
 		if (countDigits(n) == digits / 2) {
 			if (digits % 2 == 0) {
-				for (int i = 0; i < 10; i++) {
-					palindromes.add(Integer.parseInt(n + "" + i + i + reverse(n)));
-				}
+				palindromes.add(Integer.parseInt(n + "" + reverse(n)));
 			} else {
 				for (int i = 0; i < 10; i++) {
 					palindromes.add(Integer.parseInt(n + "" + i + reverse(n)));
