@@ -51,7 +51,7 @@ public class PrimePalindromesTest {
 	@Test
 	public void testGeneratingMatchesFiltering() {
 		PrimePalindromes mpp = new PrimePalindromes();
-		int a = 11;
+		int a = 2;
 		int b = 101;
 		assertTrue(filteringSolution(a, b).containsAll(mpp.primePalindromes(a, b)));
 		assertTrue(mpp.primePalindromes(a, b).containsAll(filteringSolution(a, b)));
