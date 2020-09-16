@@ -26,11 +26,6 @@ public class PrimePalindromes {
 	}
 
 	private void generatePalindrome(int digits, int n, List<Integer> palindromes) {
-		if (digits == 1) {
-			palindromes.add(n);
-			return;
-		}
-		
 		if (countDigits(n) == digits / 2) {
 			if (digits % 2 == 0) {
 				palindromes.add(Integer.parseInt(n + "" + reverse(n)));
